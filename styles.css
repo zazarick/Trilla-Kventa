@@ -687,17 +687,17 @@ body {
 
 .character-photo {
     border: 2px solid #ff0000;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
-    max-width: 280px;
+    max-width: 380px;
     margin: 0 auto;
     animation: fadeInScale 1.2s ease-out 1.1s both;
 }
 
 .character-photo img {
     width: 100%;
-    height: 350px;
+    height: 480px;
     object-fit: contain;
     object-position: center;
     transition: transform 0.3s ease;
@@ -968,7 +968,7 @@ body {
     }
     
     .character-photo {
-        max-width: 250px;
+        max-width: 320px;
     }
     
     .history-content {
@@ -988,7 +988,7 @@ body {
     }
     
     .character-photo img {
-        height: 300px;
+        height: 400px;
     }
     
     .psych-item {
