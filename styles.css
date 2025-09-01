@@ -1085,6 +1085,129 @@ body {
     text-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
 }
 
+/* Стили для страницы "Битва за Маккеб" */
+.battle-content {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.battle-text {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(139, 0, 0, 0.1));
+    backdrop-filter: blur(15px);
+    border: 2px solid #8b0000;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(139, 0, 0, 0.3);
+    animation: fadeInScale 1s ease-out 0.5s both;
+}
+
+.battle-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(139, 0, 0, 0.3);
+}
+
+.battle-subtitle {
+    font-size: 2.5rem;
+    color: #8b0000;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.planet-image-section {
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+    animation: fadeInScale 1s ease-out 0.7s both;
+}
+
+.planet-photo {
+    border: 3px solid #8b0000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(139, 0, 0, 0.4);
+    max-width: 500px;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.planet-photo:hover {
+    transform: scale(1.02);
+    border-color: #ff0000;
+    box-shadow: 0 20px 45px rgba(139, 0, 0, 0.6);
+}
+
+.planet-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
+}
+
+.planet-caption {
+    margin-top: 1rem;
+}
+
+.planet-caption p {
+    font-size: 1.1rem;
+    color: #8b0000;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+    font-style: italic;
+}
+
+.battle-paragraph {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(139, 0, 0, 0.05));
+    border-left: 4px solid #8b0000;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.battle-paragraph:nth-child(2) { animation-delay: 0.6s; }
+.battle-paragraph:nth-child(3) { animation-delay: 0.8s; }
+.battle-paragraph:nth-child(4) { animation-delay: 1.0s; }
+.battle-paragraph:nth-child(5) { animation-delay: 1.2s; }
+.battle-paragraph:nth-child(6) { animation-delay: 1.4s; }
+.battle-paragraph:nth-child(7) { animation-delay: 1.6s; }
+
+.battle-paragraph:hover {
+    transform: translateX(10px);
+    border-left-color: #ff0000;
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.4);
+}
+
+.battle-paragraph p {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.battle-paragraph:first-of-type p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffcccc;
+}
+
+.battle-paragraph:last-of-type p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffcccc;
+    text-align: center;
+    font-style: italic;
+}
+
 .relationships-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -1225,5 +1348,46 @@ body {
     
     .character-photo img {
         height: 350px;
+    }
+    
+    /* Адаптивность для страницы "Битва за Маккеб" */
+    .battle-content {
+        padding: 2rem 1rem;
+    }
+    
+    .battle-text {
+        padding: 2rem 1.5rem;
+    }
+    
+    .battle-subtitle {
+        font-size: 2rem;
+    }
+    
+    .battle-paragraph {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .battle-paragraph p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .battle-paragraph:first-of-type p,
+    .battle-paragraph:last-of-type p {
+        font-size: 1.1rem;
+    }
+    
+    /* Адаптивность для изображения планеты */
+    .planet-photo {
+        max-width: 100%;
+    }
+    
+    .planet-photo img {
+        height: 200px;
+    }
+    
+    .planet-caption p {
+        font-size: 1rem;
     }
 }
