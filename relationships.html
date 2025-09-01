@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отношения</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="stars-extra"></div>
+    <div class="stars-layer3"></div>
+    
+    <!-- Заголовок -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-logo">
+                <span>⚡</span>
+                <span>Kventa Cristall</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">Trilla Jornald</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="trilla.html" class="dropdown-link">Биография</a></li>
+                        <li><a href="history.html" class="dropdown-link">История</a></li>
+                        <li><a href="relationships.html" class="dropdown-link">Взаимоотношения</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">ОТНОШЕНИЯ</h1>
+                <p class="hero-subtitle">Связи и союзы Trilla Jornald</p>
+            </div>
+        </section>
+
+        <section class="factions-section">
+            <div class="faction-tabs">
+                <button class="faction-tab active" data-faction="sith">
+                    <span class="faction-icon">⚔️</span>
+                    <span class="faction-name">SITH</span>
+                </button>
+                <button class="faction-tab" data-faction="mando">
+                    <span class="faction-icon">🛡️</span>
+                    <span class="faction-name">MANDO</span>
+                </button>
+            </div>
+
+            <!-- SITH фракция -->
+            <div class="faction-content active" id="sith-content">
+                <h2 class="faction-title">Империя Ситхов</h2>
+                <div class="relationships-grid">
+                    <div class="relationship-card">
+                                                 <div class="character-photo">
+                             <img src="images/arsa-snow.jpg" alt="Арса Сноу">
+                         </div>
+                        <div class="character-info">
+                            <h3 class="character-name">Арса Сноу</h3>
+                            <p class="character-description">Наставница Кристала. Ёщё будочи Аколитом она взяла его под своё крыло. Единственная перед кем Кристал преклоняет колено в независимости от её звания.</p>
+                            <div class="relationship-status friendly">
+                                <span class="status-icon">🤝</span>
+                                <span class="status-text">Отношения: дружелюбные</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relationship-card">
+                                                 <div class="character-photo">
+                             <img src="images/kruel.jpg" alt="Круэл">
+                         </div>
+                        <div class="character-info">
+                            <h3 class="character-name">Круэл</h3>
+                            <p class="character-description">Кристал считает его другом, но относится с недоверием.</p>
+                            <div class="relationship-status friendly">
+                                <span class="status-icon">🤝</span>
+                                <span class="status-text">Отношения: дружелюбные</span>
+                            </div>
+                        </div>
+                    </div>
+
+                                         <div class="relationship-card">
+                         <div class="character-photo">
+                             <img src="images/reyvan-north.jpg" alt="Рейван Норт">
+                         </div>
+                         <div class="character-info">
+                             <h3 class="character-name"><a href="https://sites.google.com/view/reivan-nort/главная-страница" target="_blank" class="character-link">Рейван Норт</a></h3>
+                             <p class="character-description">Кристал считает его человеком с ''Дурным характером". В свою очередь тот помогает ему подняться по карьерной лестнице.</p>
+                             <div class="relationship-status neutral">
+                                 <span class="status-icon">⚖️</span>
+                                 <span class="status-text">Отношения: нейтральные</span>
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="relationship-card">
+                         <div class="character-photo">
+                             <img src="images/yuta-okuttsu.jpg" alt="Юта Окуттсу">
+                         </div>
+                         <div class="character-info">
+                             <h3 class="character-name">Юта Окуттсу</h3>
+                             <p class="character-description">Кристал мало его знает. Считает его мускулистым и добрым дядей.</p>
+                             <div class="relationship-status neutral">
+                                 <span class="status-icon">⚖️</span>
+                                 <span class="status-text">Отношения: нейтральные</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+                         <!-- MANDO фракция -->
+             <div class="faction-content" id="mando-content">
+                 <h2 class="faction-title">Мандалорцы</h2>
+                 <div class="relationships-grid">
+                     <div class="relationship-card">
+                         <div class="character-photo">
+                             <img src="images/aurora.jpg" alt="Аврора Гоар">
+                         </div>
+                         <div class="character-info">
+                             <h3 class="character-name">Аврора Гоар</h3>
+                             <p class="character-description">Единственная Мандалорка с которой знаком Кристал.</p>
+                             <div class="relationship-status friendly">
+                                 <span class="status-icon">🤝</span>
+                                 <span class="status-text">Отношения: дружелюбные</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

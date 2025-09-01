@@ -288,6 +288,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Сохраняем функцию для использования в будущем
     window.animateCounter = animateCounter;
 
+    // Управление вкладками фракций на странице "Отношения"
+    const factionTabs = document.querySelectorAll('.faction-tab');
+    const factionContents = document.querySelectorAll('.faction-content');
+
+    factionTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetFaction = this.getAttribute('data-faction');
+            
+            // Убираем активный класс со всех вкладок и контента
+            factionTabs.forEach(t => t.classList.remove('active'));
+            factionContents.forEach(c => c.classList.remove('active'));
+            
+            // Добавляем активный класс к выбранной вкладке и контенту
+            this.classList.add('active');
+            document.getElementById(`${targetFaction}-content`).classList.add('active');
+        });
+    });
+
     console.log('🚀 Krenta Cristall - Сила в знаниях!');
     console.log('✨ Сайт успешно загружен и готов к работе');
 });
