@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Star Wars: Старая Республика</title>
+    <title>Выбор персонажа</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="stars"></div>
     <div class="twinkling"></div>
+    <div class="stars-extra"></div>
+    <div class="stars-layer3"></div>
     
     <header class="header">
         <nav class="nav">
@@ -18,11 +21,15 @@
                 <span class="logo-subtitle">CRISTALL</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#" class="nav-link active">Главная</a></li>
-                <li><a href="#" class="nav-link">О нас</a></li>
-                <li><a href="#" class="nav-link">Услуги</a></li>
-                <li><a href="#" class="nav-link">Контакты</a></li>
-                <li><a href="#" class="nav-link login-btn">Войти</a></li>
+                <li><a href="index.html" class="nav-link active">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Trilla Jornald</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="trilla.html" class="dropdown-link">Биография</a></li>
+                        <li><a href="history.html" class="dropdown-link">История</a></li>
+                        <li><a href="#" class="dropdown-link">Взаимоотношения</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -31,63 +38,35 @@
         <section class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="title-line" contenteditable="true">Заголовок</span>
-                    <span class="title-line" contenteditable="true">Подзаголовок</span>
+                    <span class="title-line">ДОБРО ПОЖАЛОВАТЬ</span>
                 </h1>
-                <p class="hero-subtitle" contenteditable="true">Описание</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary">Начать путешествие</button>
-                    <button class="btn btn-secondary">Узнать больше</button>
+                <p class="hero-subtitle">Выберите персонажа:</p>
+                
+                <div class="character-selection">
+                    <h2 class="selection-title">Персонажи:</h2>
+                    <div class="character-grid">
+                        <a href="trilla.html" class="character-card sith-card">
+                            <div class="character-image">
+                                <img src="https://avatars.mds.yandex.net/i?id=f0af54b072962eecd6be6ee1dc068ca3cbfbbb8f-12718998-images-thumbs&n=13" alt="Trilla Jornald">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Trilla Jornald</h3>
+                                <p class="character-class">SITH</p>
+                            </div>
+                        </a>
+                        
+
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="holocron">
-                    <div class="holocron-face front"></div>
-                    <div class="holocron-face back"></div>
-                    <div class="holocron-face left"></div>
-                    <div class="holocron-face right"></div>
-                    <div class="holocron-face top"></div>
-                    <div class="holocron-face bottom"></div>
-                </div>
-            </div>
+            
+
         </section>
 
-        <section class="features">
-            <h2 class="section-title">Сила в знаниях</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Мощность</h3>
-                    <p>Неисчерпаемый источник энергии и возможностей</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Защита</h3>
-                    <p>Надежная охрана ваших данных и интересов</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Развитие</h3>
-                    <p>Постоянное совершенствование и рост</p>
-                </div>
-            </div>
-        </section>
 
-        <section class="cta">
-            <div class="cta-content">
-                <h2>Готовы к приключению?</h2>
-                <p>Присоединяйтесь к нам и откройте новые горизонты</p>
-                <button class="btn btn-primary">Присоединиться</button>
-            </div>
-        </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Krenta Cristall. Все права защищены.</p>
-            <p>Да пребудет с вами Сила</p>
-        </div>
-    </footer>
+
 
     <script src="script.js"></script>
 </body>

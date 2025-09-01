@@ -68,6 +68,59 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.transform = 'scale(1)';
     });
 
+    // Управление выпадающим меню
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('.nav-link');
+        
+        // Добавляем свойство для отслеживания способа открытия меню
+        dropdown.wasOpenedByClick = false;
+        
+        dropdownLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdown.wasOpenedByClick = true;
+            
+            // Закрываем все другие открытые меню
+            dropdowns.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown) {
+                    otherDropdown.classList.remove('active');
+                    otherDropdown.wasOpenedByClick = false;
+                }
+            });
+            
+            // Переключаем состояние текущего меню
+            dropdown.classList.toggle('active');
+            
+            // Если меню закрылось, сбрасываем флаг
+            if (!dropdown.classList.contains('active')) {
+                dropdown.wasOpenedByClick = false;
+            }
+        });
+        
+        // Закрытие меню при клике вне его
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+                dropdown.wasOpenedByClick = false;
+            }
+        });
+        
+        // Автоматическое закрытие при уходе курсора ТОЛЬКО если меню было открыто по наведению
+        dropdown.addEventListener('mouseleave', function() {
+            // Если меню было открыто по клику, НЕ закрываем его
+            if (dropdown.wasOpenedByClick) {
+                return;
+            }
+            
+            // Если меню было открыто по наведению, закрываем его
+            setTimeout(() => {
+                if (!this.matches(':hover') && !dropdown.wasOpenedByClick) {
+                    this.classList.remove('active');
+                }
+            }, 100);
+        });
+    });
+
     // Эффект параллакса для звезд
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
