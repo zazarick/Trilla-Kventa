@@ -103,6 +103,8 @@ document.addEventListener('cut', function(e) {
     return false;
 });
 
+
+
 // Ждем загрузки DOM
 document.addEventListener('DOMContentLoaded', function() {
     
