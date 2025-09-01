@@ -1,3 +1,108 @@
+// Защита от ПКМ и F12
+
+// Дополнительная защита от DevTools
+setInterval(function() {
+    if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+        document.body.innerHTML = '<div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;"><h1>Доступ запрещен</h1><p>Попытка открыть инструменты разработчика обнаружена.</p></div>';
+    }
+}, 1000);
+
+// Защита от отладки
+(function() {
+    function checkDevTools() {
+        const start = performance.now();
+        debugger;
+        const end = performance.now();
+        
+        if (end - start > 100) {
+            document.body.innerHTML = '<div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;"><h1>Доступ запрещен</h1><p>Обнаружена попытка отладки.</p></div>';
+        }
+    }
+    
+    setInterval(checkDevTools, 1000);
+})();
+
+// Защита от консоли
+console.log = function() {};
+console.warn = function() {};
+console.error = function() {};
+console.info = function() {};
+console.debug = function() {};
+
+// Дополнительная защита от инспектирования
+document.addEventListener('keydown', function(e) {
+    // Блокировка Ctrl+Shift+I (DevTools)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Блокировка Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Блокировка Ctrl+Shift+C (Inspect Element)
+    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Блокировка Ctrl+U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Блокировка F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Защита от правого клика
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    return false;
+});
+
+// Защита от перетаскивания
+document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+    return false;
+});
+
+// Защита от выделения
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+    return false;
+});
+
+// Защита от iframe
+if (window.self !== window.top) {
+    window.top.location = window.self.location;
+}
+
+// Защита от копирования
+document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    return false;
+});
+
+// Защита от вставки
+document.addEventListener('paste', function(e) {
+    e.preventDefault();
+    return false;
+});
+
+// Защита от вырезания
+document.addEventListener('cut', function(e) {
+    e.preventDefault();
+    return false;
+});
+
 // Ждем загрузки DOM
 document.addEventListener('DOMContentLoaded', function() {
     
