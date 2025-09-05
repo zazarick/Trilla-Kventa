@@ -526,7 +526,7 @@ body {
     text-shadow: 0 0 10px #ff0000;
 }
 
-/* Биография персонажа */
+/* Биография персонажа - Трилла */
 .character-name-large {
     font-size: 2.5rem;
     font-weight: 700;
@@ -881,7 +881,7 @@ body {
     font-family: 'Courier New', monospace;
 }
 
-/* Стили для страницы "История" */
+/* Стили для страницы "История" - Трилла */
 .history-content {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -916,7 +916,7 @@ body {
     margin: 0 auto;
 }
 
-/* Стили для страницы истории */
+/* Стили для страницы истории - Трилла */
 .history-hero {
     text-align: center;
     justify-content: center;
@@ -1103,7 +1103,7 @@ body {
     }
 }
 
-/* Стили для страницы "Отношения" */
+/* Стили для страницы "Отношения" - Трилла */
 .factions-section {
     padding: 4rem 2rem;
     max-width: 1400px;
@@ -1178,7 +1178,7 @@ body {
     text-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
 }
 
-/* Стили для страницы "Битва за Маккеб" */
+/* Стили для страницы "Битва за Маккеб" - Трилла */
 .battle-content {
     padding: 4rem 2rem;
     max-width: 1200px;
